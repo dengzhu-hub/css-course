@@ -1,0 +1,168 @@
+.card {
+  position: relative;
+  perspective: 150rem;
+  height: 50rem;
+  -webkit-perspective: 150rem;
+  &-side {
+    height: 50rem;
+    // padding: 2.5rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+
+    &--front {
+      background-color: $color-white;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &-01 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-02 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-03 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &-side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-side--back {
+    transform: rotateY(0);
+  }
+  &-picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &--01 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+
+    &--02 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6.jpg);
+    }
+
+    &--03 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7.jpg);
+    }
+  }
+  &-heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $color-white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone; // 多行显示
+
+      &--01 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 0.85)
+        );
+      }
+
+      &--02 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85)
+        );
+      }
+
+      &--03 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        );
+      }
+    }
+  }
+  &-details {
+    // background-color: $color-primary;
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      text-transform: capitalize;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+  &-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  &-price-box {
+    margin-bottom: 8rem;
+    color: $color-white;
+  }
+  &-price-only {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  &-price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

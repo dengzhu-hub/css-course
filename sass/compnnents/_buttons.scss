@@ -1,0 +1,97 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.6rem;
+
+    // change for the button element
+
+    border: none;
+    cursor: pointer;
+
+  }
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-3px);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 1rem rgba($color-black, 0.2);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    border-radius: 10rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &--white {
+    color: $color-gray-dark;
+    background-color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    animation: moveInUp 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards; /*  CSS自动填充为0的设置*/
+  }
+}
+
+.btn--text {
+
+
+  &:link,
+  &:visited {
+
+    text-decoration: none;
+    display: inline-block;
+    color: $color-primary;
+    padding: 3px;
+    font-size: $default-font-size;
+    border-bottom: 1px solid $color-primary;
+    transition: all 0.2s;
+    text-transform: capitalize
+    
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(0);
+  }
+}
