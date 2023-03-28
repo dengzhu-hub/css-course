@@ -537,6 +537,7 @@ body {
     height: auto; }
   .footer-navigation {
     border-top: 1px solid #777;
+    margin-top: 6px;
     padding-top: 2rem;
     display: inline-block; }
   .footer-list {
@@ -564,7 +565,8 @@ body {
     border-top: 1px solid #999;
     padding-top: 2rem;
     color: #f7f7f7;
-    width: 80%; }
+    width: 80%;
+    float: right; }
 
 .section-about {
   background-color: #f7f7f7;

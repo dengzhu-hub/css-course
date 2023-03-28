@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+      h1[class]{
+    color: #087f5b;
+    font-size: 100px;
+}
+h1[title]{
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #ff00ff;
+    display: inline-block;
+    padding: 0 12px;
+    box-shadow: 0 0.5rem 1.6rem rgba(255, 143, 234);
+    background-color: aqua;
+}
+p[class~='urgent'] {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #ffb900;
+   
+   
+
+}
+img[title~='hello'] {
+    border: 4px solid #ff8787;
+    border-radius: 11px;
+    padding: 1.2rem 1.6rem;
+}
+span {
+    font-size: 2rem;
+}
+span[class*="cloudy"] {
+    font-style: italic;
+}
+span[class*='bar'] {
+    /* background: #ffb900; */
+}
+span[class$='y'] {
+    font-weight: bold;
+    display: inline-block;
+    color: #087f5b;
+}
+
+*[lang|="en"] {
+    color: #333;
+    font-size: 3rem;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 title="hel">Hello</h1>
+    <h1 class="severe">Hello</h1>
+    <h1 class="fancy">Hello</h1>
+    <p class="urgent warning">When handing plutonium, care must
+         be taken to avoid the formation.</p>
+         <img src="./img/favicon.png" alt="favicon" title="hello">
+         
+         <span class="cloudy barren">Venus</span>
+         <span class="rocky barren">Mercury</span>
+         <span class=" life-bearing cloudy">Earth</span>
+         <h1 lang="en">hello</h1>
+         <p lang="en-us">greeting!</p>
+         <div lang="en-au">G'day!</div>
+         <h3 lang="en-">hellJrooanao</h3>
+</body>
+</html>

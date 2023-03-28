@@ -1,0 +1,3 @@
+<planet>Earth</planet>
+<planet moons="1">Venus</planet>
+<planet moons="2">Mars</planet>
