@@ -1,3 +1,4 @@
+@import '../../node_modules/open-color/open-color.scss';
 .navigation {
     &_checkbox {
         display: none;
@@ -7,13 +8,14 @@
 
     
     &_button {
-        background-color: $color-white;
+        background-color: $oc-teal-7;
         height: 7rem;
         width: 7rem;
         position: fixed;
         top: 6rem;
         right: 6rem;
-        z-index: 2000;
+        border-radius: 50%;
+        // z-index: 2000;
 
 
     }
@@ -24,8 +26,9 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        background-image: radial-gradient($oc-teal-2, $oc-teal-7);
         z-index: 1000;
+        transform: scale(50);
 
        
        
@@ -33,15 +36,35 @@
 
     }
     &_nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        
 
     }
     &_list {
+       list-style: none;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, - 50%);
+       text-align: center;
 
     }
     &_item {
+        margin: 1rem;
 
     }
     &_link {
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $oc-white;
+
 
     }
 

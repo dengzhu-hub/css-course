@@ -12,7 +12,7 @@
     "jquery": "^3.6.3"
   },
   "dependencies": {
-   
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "open-color": "^1.9.1"
   }
 }
