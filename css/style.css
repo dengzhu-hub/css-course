@@ -546,7 +546,10 @@ body {
   font-size: 3rem;
   font-weight: 300;
   text-transform: uppercase;
-  color: #ffffff; }
+  color: #ffffff;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(120deg, #b2f2bb 0%, #69db7c 50%, #ffffff 50%);
+  background-size: 100%; }
 
 .row {
   max-width: 114rem;
