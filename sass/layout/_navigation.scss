@@ -1,74 +1,142 @@
-@import '../../node_modules/open-color/open-color.scss';
+@import "../../node_modules/open-color/open-color.scss";
 .navigation {
-    &_checkbox {
-        display: none;
+  &_checkbox {
+    display: none;
+  }
 
+  &_button {
+    background-color: $oc-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    text-align: center;
+    right: 6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($oc-black, 0.1);
+  }
+  &_background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($oc-teal-2, $oc-teal-7);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.94, 0.02, 0.08, 1.62);
+    // transform: scale(50);
+  }
+  &_nav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
 
+    transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+
+    opacity: 0;
+    // background-color: orangered;
+  }
+  &_list {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &_item {
+    margin-bottom: 1rem;
+  }
+  &_link {
+    display: inline-block;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $oc-white;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $oc-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s ease-in-out;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
     }
-
-    
-    &_button {
-        background-color: $oc-teal-7;
-        height: 7rem;
-        width: 7rem;
-        position: fixed;
-        top: 6rem;
-        right: 6rem;
-        border-radius: 50%;
-        // z-index: 2000;
-
-
+    &:hover,
+    &:active {
+      background-position: 100%;
+      transform: translateX(1rem);
+      color: $color-primary;
     }
-    &_background {
-        height: 6rem;
-        width: 6rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
-        background-image: radial-gradient($oc-teal-2, $oc-teal-7);
-        z-index: 1000;
-        transform: scale(50);
+  }
 
-       
-       
+  // functionality
+  &_checkbox:checked ~ &_background {
+    transform: scale(50);
+  }
+  &_checkbox:checked ~ &_nav {
+    opacity: 1;
+    width: 100%;
+  }
 
-
+  // icon
+  &_icon {
+    margin-top: 3.5rem;
+    position: relative;
+    &,
+    &:before,
+    &:after {
+      width: 3rem;
+      height: 0.2rem;
+      display: inline-block;
+      background-color: $color-gray-dark;
     }
-    &_nav {
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 1500;
-        
-
+    &::before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
     }
-    &_list {
-       list-style: none;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, - 50%);
-       text-align: center;
-
+    &:before {
+      top: -0.8rem;
+      // transform-origin: left;
     }
-    &_item {
-        margin: 1rem;
-
+    &:after {
+      top: 0.8rem;
     }
-    &_link {
-        text-decoration: none;
-        font-size: 3rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: $oc-white;
-        padding: 1rem 2rem;       
-        background-image: linear-gradient(120deg, $oc-green-2 0%, $oc-green-4 50%, $oc-white 50%);
-        background-size: 100%;
-
-
-    }
-
+  }
+  &_button:hover &_icon:before {
+    top: -1rem;
+  }
+  &_button:hover &_icon:after {
+    top: 1rem;
+  }
+  &_checkbox:checked + &_button &_icon {
+    background-color: transparent;
+  }
+  &_checkbox:checked + &_button &_icon:before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &_checkbox:checked + &_button &_icon:after {
+    top: 0;
+    transform: rotate(135deg);
+  }
 }

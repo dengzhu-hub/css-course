@@ -500,5 +500,121 @@
 
 #### WHAT YOU WILL LEARN IN THIS SECTION
 
-* CHECKBOX HACK
-  * 
+* What the “checkbox hack” is and how it works; 
+* • How to create custom animation timing  functions using cubic bezier curves; 
+* • How to animate “solid-color gradients”; 
+* • How and why to use transform-origin;
+*  • In general: create an amazingly creative effect
+
+#### navigation 学习
+
+* index结构
+
+  * ```html
+        <div class="navigation">
+          <input type="checkbox" id="navi-toggle" class="navigation_checkbox">
+          <label for="navi-toggle" class="navigation_button">Menu</label>
+          <div class="navigation_background">&nbsp;</div>
+          <nav class="navigation_nav">
+            <ul class="navigation_list">
+              <li class="navigation_item"><a href="#" class="navigation_link">About Natous</a></li>
+              <li class="navigation_item"><a href="#" class="navigation_link">Your Benefits</a></li>
+              <li class="navigation_item"><a href="#" class="navigation_link">Popular Tours</a></li>
+              <li class="navigation_item"><a href="#" class="navigation_link">Stories</a></li>
+              <li class="navigation_item"><a href="#" class="navigation_link">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+    ```
+
+  * 编写scss文件
+
+    * 背景
+
+      ```scss
+        &_background {
+          height: 6rem;
+          width: 6rem;
+          border-radius: 50%;
+          position: fixed;
+          top: 6.5rem;
+          right: 6.5rem;
+          background-image: radial-gradient($oc-teal-2, $oc-teal-7);
+          z-index: 1000;
+          transform: scale(50);
+        }
+      ```
+
+      * ![image-20230413184231086](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304131842277.png)
+
+    * button
+
+      * ```scss
+          &_button {
+            background-color: $oc-white;
+            height: 7rem;
+            width: 7rem;
+            position: fixed;
+            top: 6rem;
+            right: 6rem;
+            border-radius: 50%;
+            z-index: 2000;
+          }
+        ```
+
+        * ![image-20230413184326771](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304131843822.png)
+
+    * content
+
+      * ```scss
+        
+          &_nav {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1500;
+          }
+          &_list {
+            list-style: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+          &_item {
+            margin-bottom: 1rem;
+          }
+          &_link {
+            display: inline-block;
+            &:link,
+            &:visited {
+              text-decoration: none;
+              font-size: 3rem;
+              font-weight: 300;
+              text-transform: uppercase;
+              color: $oc-white;
+              padding: 1rem 2rem;
+              background-image: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 50%,
+                $oc-white 50%
+              );
+              background-size: 220%;
+              transition: all 0.4s ease-in-out;
+            }
+            &:hover,
+            &:active {
+              background-position: 100%;
+              transform: translateX(1rem);
+              color: $color-primary;
+            }
+          }
+        ```
+
+    * 需要注意的是：记得将<a></a>设置display: inline-block;不然padding，和margin属性不会生效
+
+    * <video src="C:\Users\jackdeng\Videos\Captures\Natours _ Exciting tours for adventurous people - Google Chrome 2023-04-13 18-47-02.mp4"></video>
