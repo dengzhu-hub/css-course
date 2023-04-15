@@ -618,3 +618,190 @@
     * 需要注意的是：记得将<a></a>设置display: inline-block;不然padding，和margin属性不会生效
 
     * <video src="C:\Users\jackdeng\Videos\Captures\Natours _ Exciting tours for adventurous people - Google Chrome 2023-04-13 18-47-02.mp4"></video>
+
+* icon实现
+
+  * ```html
+      <label for="navi-toggle" class="navigation_button">
+            <span class="navigation_icon">&nbsp;</span>
+          </label>
+    ```
+
+  * 利用伪类实现icon
+
+    * ```scss
+        &_icon {
+          margin-top: 3.5rem;
+          position: relative;
+          &,
+          &:before,
+          &:after {
+            width: 3rem;
+            height: 0.2rem;
+            display: inline-block;
+            background-color: $color-gray-dark;
+          }
+          &::before,
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+          }
+          &:before {
+            top: -0.8rem;
+            // transform-origin: left;
+          }
+          &:after {
+            top: 0.8rem;
+          }
+        }
+      ```
+
+    * 
+
+    * 实现基本动画
+
+      * ```scss
+          &_button:hover &_icon:before {
+            top: -1rem;
+          }
+          &_button:hover &_icon:after {
+            top: 1rem;
+          }
+        ```
+
+    * 点下按钮时由菜单转向关闭
+
+      * ```scss
+          &_checkbox:checked + &_button &_icon {
+            background-color: transparent;
+          }
+          &_checkbox:checked + &_button &_icon:before {
+            top: 0;
+            transform: rotate(-135deg);
+          }
+          &_checkbox:checked + &_button &_icon:after {
+            top: 0;
+            transform: rotate(135deg);
+          }
+        }
+        ```
+
+      
+
+#### 实现popup
+
+* index.html
+
+  * ```Html
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <a href="#section-tours" class="popup-close">&times;</a>
+            <div class="popup-left">
+              <img src="./img/nat-8.jpg" alt="Tours photo" class="popup-img">
+              <img src="./img/nat-9.jpg" alt="Tours photo" class="popup-img">
+    
+            </div>
+            <div class="popup-right">
+              <h2 class="heading-secondary u-margin-bottom-small">Starting book now</h2>
+              <h3 class="heading-tertiary u-margin-bottom-small">Import &ndash; Please read these terms before booking</h3>
+              <p class="popup-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras. Ut ornare lectus sit amet est placerat in. Eros in cursus turpis massa tincidunt dui ut ornare. Nibh sit amet commodo nulla. Non blandit massa enim nec dui nunc mattis. Porta non pulvinar neque laoreet suspendisse interdum. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Fusce id velit ut tortor pretium viverra suspendisse. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Tristique risus nec feugiat in fermentum posuere. Quam elementum pulvinar etiam non quam lacus.
+              </p>
+              <a href="#booking-now" class="btn btn--green">Booking Now</a>
+            </div>
+          </div>
+        </div>
+    
+    ```
+
+  * scss文件
+
+    * ```scss
+      //编写scss函数
+      @mixin obsCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      ```
+
+    * 重要的点
+
+      * ```scss
+        //target 伪类
+          &:target {
+            opacity: 1;
+            visibility: visible;
+          }
+          &:target &-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        ```
+
+      * 就是当被选中为目标时，会执行的代码
+
+      * 还有就是table-cell
+
+        * ```scss
+           display: table-cell;
+          ```
+
+        * 需要将父元素设置为
+
+          * ```scss
+            display: table
+            ```
+
+        * eg:
+
+          * ```scss
+                &-content {
+                width: 75%;
+                @include obsCenter;
+                background-color: $oc-white;
+                box-shadow: 0 2rem 4rem rgba($oc-black, 0.8);
+                display: table;
+              
+              &-right {
+                width: 66.66666%;
+                display: table-cell;
+                vertical-align: middle;
+                padding: 3rem 5rem;
+              }
+              
+                &-left {
+                width: 33.333333333%;
+                display: table-cell;
+              }
+                    这里将父元素，设置为table，将两个子元素设置为 table-cell，它可以让子元素拥有相同的高度，但是用float: left就会根据内容来适应，按需要选择此元素。
+            ```
+
+      * hyphens &&  column property
+
+        * ```scss
+            &-text {
+              font-size: 1.6rem;
+              margin-bottom: 4rem;
+              -webkit-column-count: 2;
+              column-count: 2;
+              column-gap: 4rem;
+              column-rule: 1px solid $oc-gray-2;
+              hyphens: auto;
+            }
+          ```
+
+        * ![image-20230415122607908](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304151226275.png)
+
+#### 效果
+
+<video src="C:\Users\jackdeng\Videos\Captures\Natours _ Exciting tours for adventurous people - Google Chrome 2023-04-15 14-06-49.mp4"></video>
+
+### 响应式布局
+
+![IMG_1323(20230415-141130)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304151412855.JPG)
