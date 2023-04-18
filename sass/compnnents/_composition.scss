@@ -1,4 +1,5 @@
 .composition {
+
   position: relative;
   &:hover &-photo:not(:hover) {
     transform: scale(0.95);

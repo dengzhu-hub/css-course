@@ -12,6 +12,14 @@
     top: 6rem;
     text-align: center;
     right: 6rem;
+    @include media(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include media(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
     border-radius: 50%;
     cursor: pointer;
     z-index: 2000;
@@ -20,6 +28,14 @@
   &_background {
     height: 6rem;
     width: 6rem;
+    @include media(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include media(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
     border-radius: 50%;
     position: fixed;
     top: 6.5rem;

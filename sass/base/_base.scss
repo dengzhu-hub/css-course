@@ -1,16 +1,29 @@
 *,
-*::after,
-*::before {
+*:before,
+*.after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-// this defines what 1rem is
 html {
   font-size: 62.5%;
+
+  @include media(tab-land) {
+    font-size: 56.25%; // 1rem = 9px 9/16 = 56.25%
+  }
+  @include media(tab-port) {
+    font-size: 50%; // 1rem = 8px 8/16 = 50%
+  }
+  @include media(big-desktop) {
+    font-size: 75%; // 1rem = 12x 12/16 = 75%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include media(tab-port) {
+    padding: 0;
+  }
 }
