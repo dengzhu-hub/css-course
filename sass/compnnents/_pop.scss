@@ -1,0 +1,83 @@
+@import "../../node_modules/open-color/open-color.scss";
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($oc-black, 0.8);
+  z-index: 9999;
+  transition: all 0.3s;
+  //   display: none;
+  opacity: 0;
+  visibility: hidden;
+
+  &-content {
+    width: 75%;
+    @include obsCenter;
+    background-color: $oc-white;
+    box-shadow: 0 2rem 4rem rgba($oc-black, 0.8);
+    display: table;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: all 0.4s 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+
+  &-left {
+    @include mediaQuery {
+      width: 40%;
+    }
+    width: 33.333333333%;
+    display: table-cell;
+  }
+  &-img {
+    width: 100%;
+    display: block;
+  }
+  &-right {
+    width: 66.66666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  &-text {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $oc-gray-2;
+    hyphens: auto;
+  }
+  &-close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 3.5rem;
+      right: 3.5rem;
+      font-size: 3.2rem;
+      line-height: 1;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: $oc-gray-7;
+      display: inline-block;
+      cursor: pointer;
+    }
+    &:hover {
+      color: $oc-green-6;
+    }
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target &-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
