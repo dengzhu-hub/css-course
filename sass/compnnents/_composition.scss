@@ -1,5 +1,4 @@
 .composition {
-
   position: relative;
   &:hover &-photo:not(:hover) {
     transform: scale(0.95);
@@ -9,6 +8,12 @@
     width: 55%;
     position: absolute;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    @include media(tab-port) {
+      width: 33.33333333333333%;
+      position: relative;
+      float: left;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
     // border-radius: 2px;
     z-index: 10;
     transition: all 0.2s;
@@ -16,15 +21,29 @@
     &--p1 {
       left: 0;
       top: 0;
+      @include media(tab-port) {
+        top: 0;
+        transform: scale(1.2);
+      }
     }
 
     &--p2 {
+      @include media(tab-port) {
+        top: -1rem;
+        transform: scale(1.3);
+        z-index: 100;
+      }
       top: 2rem;
       right: 0;
     }
 
     &--p3 {
-      top: 10rem;
+      top: 1rem;
+      @include media(tab-port) {
+        left: 0;
+        top: 1rem;
+        transform: scale(1.2);
+      }
       left: 20%;
     }
     &:hover {

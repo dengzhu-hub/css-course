@@ -1,16 +1,45 @@
 .book {
-    // background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    //           linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    //           linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%),
-    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white,.9) 50%, transparent 50%),
+  // background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  //           linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+  //           linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%),
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
     url(../img/nat-10.jpg);
-    height: 50rem;
+  // 用于测试
+  // height: 50rem;
+  background-size: 100%;
+  @include media(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10.jpg);
     background-size: cover;
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-    &-form {
-        width: 50%;
-        padding: 5rem;
+  }
+  @include media(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10.jpg);
+  }
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  &-form {
+    width: 50%;
+    @include media(tab-land) {
+      width: 65%;
+    }
+    padding: 5rem;
+    @include media(tab-port) {
+      width: 100%;
     }
   }
-  
+}

@@ -8,9 +8,17 @@
   line-height: 1.7;
   // font-size: $default-font-size;
   font-size: $default-font-size;
-  background-color: rgba($color-white,.6);
+  background-color: rgba($color-white, 0.6);
   transform: skewX(-12deg);
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  @include media(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-bottom: 9rem;
+  }
+  @include media(phone) {
+    transform: skewX(0);
+  }
   &-shape {
     width: 15rem;
     height: 15rem;
@@ -21,6 +29,9 @@
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50 at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    @include media(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
     // -webkit-clip-path: circle()
 
     position: relative;
@@ -30,11 +41,14 @@
     transform: translateX(-4rem) scale(1.4);
     height: 100%;
     backface-visibility: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   &-text {
     transform: skewX(12deg);
     font-weight: 400;
+    @include media(phone) {
+      transform: skewX(0);
+    }
   }
   &-caption {
     position: absolute;
@@ -58,5 +72,4 @@
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
   }
- 
 }

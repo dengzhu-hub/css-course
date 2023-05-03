@@ -19,6 +19,9 @@
     display: inline-block;
 
     margin-bottom: 1.5rem;
+    @include media(tab-port) {
+      margin-bottom: 1rem;
+    }
   }
   &--text {
     line-height: 1.5;

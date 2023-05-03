@@ -17,8 +17,8 @@
       right: 4rem;
     }
     @include media(phone) {
-      top: 3rem;
-      right: 3rem;
+      top: 2rem;
+      right: 2rem;
     }
     border-radius: 50%;
     cursor: pointer;
@@ -26,11 +26,11 @@
     box-shadow: 0 1rem 3rem rgba($oc-black, 0.1);
   }
   &_background {
-    height: 6rem;
-    width: 6rem;
+    height: 5.5rem;
+    width: 5.5rem;
     @include media(tab-port) {
-      top: 4.5rem;
-      right: 4.5rem;
+      top: 5rem;
+      right: 5rem;
     }
     @include media(phone) {
       top: 3rem;
@@ -96,6 +96,7 @@
     }
     &:hover,
     &:active {
+      // 定义初始位置
       background-position: 100%;
       transform: translateX(1rem);
       color: $color-primary;

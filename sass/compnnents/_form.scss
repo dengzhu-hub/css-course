@@ -3,8 +3,6 @@
     margin-bottom: 2rem;
   }
   &-input {
-
-    
     font-size: 1.5rem;
     font-family: inherit;
     color: inherit;
@@ -48,6 +46,10 @@
   &-radio--group {
     width: 49%;
     display: inline-block;
+    @include media(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &-radio--input {
     cursor: pointer;

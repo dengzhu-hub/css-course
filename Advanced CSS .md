@@ -806,14 +806,26 @@
 
 ![IMG_1323(20230415-141130)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304151412855.JPG)
 
-#### JKSAHDKA 
+- 有条件的通过 [`@media`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media) 和 [`@import`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import) [at-rules](https://developer.mozilla.org/zh-CN/docs/Web/CSS/At-rule) 用[CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) 装饰样式。
+- 用 `media=` 属性为[``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/style), [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link), [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source)和其他[HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
 
-* DAHSK
+```html
+<link rel="stylesheet" src="styles.css" media="screen" />
+<link rel="stylesheet" src="styles.css" media="print" />
+```
 
-  * DSHAKLA
-    * SKD;A
+![IMG_1327(20230416-161357)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304271257866.JPG)
 
-  ==DSD==
+![IMG_1328(20230416-162305)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304271257882.JPG)
 
-**DSD**
+![IMG_1329(20230416-162613)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304271257913.JPG)
+
+![IMG_1330(20230416-170338)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304271257936.JPG)
+
+![IMG_1331(20230416-172414)](https://makeforpicgo.oss-cn-chengdu.aliyuncs.com/study/202304271257965.JPG)
+
+1. Mobile-first（以移动设备为先）： Mobile-first是一种设计方法，它首先关注移动设备上的用户体验和显示效果。在使用Mobile-first方法时，网页的设计和开发过程从针对移动设备的布局和功能开始，然后再逐步适配到更大屏幕的设备（如平板电脑和桌面电脑）。这种方法的核心理念是将移动设备作为设计的首要考虑因素，因为移动设备的屏幕较小，网络连接可能较慢，用户交互方式也有所不同。通过Mobile-first设计，可以确保网页在移动设备上具有良好的用户体验，并逐步添加更多功能和布局，以适应较大屏幕的设备。
+2. Desktop-first（以桌面设备为先）： Desktop-first是一种设计方法，它以桌面设备为首要考虑因素进行设计和开发。在使用Desktop-first方法时，网页的设计和开发过程从针对桌面设备的布局和功能开始，然后再逐步适配到较小屏幕的设备（如平板电脑和移动设备）。这种方法的思路是将桌面设备的大屏幕和更强大的性能视为设计的主要依据，然后通过适应性布局和其他技术手段来确保网页在较小屏幕上也能提供合适的显示效果和用户体验。
+
+
 

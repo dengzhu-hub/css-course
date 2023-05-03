@@ -3,6 +3,9 @@
 .popup {
   height: 100vh;
   width: 100%;
+  @include media(tab-port) {
+    height: 90vh;
+  }
   position: fixed;
   top: 0;
   left: 0;
@@ -28,17 +31,27 @@
   }
 
   &-left {
-    @include mediaQuery {
-      width: 40%;
-    }
     width: 33.333333333%;
     display: table-cell;
+    @include media(tab-port) {
+      display: block;
+      width: 100%;
+    }
   }
   &-img {
     width: 100%;
     display: block;
+    @include media(tab-port) {
+      width: 50%;
+      float: left;
+      display: inline-block;
+    }
   }
   &-right {
+    @include media(tab-port) {
+      width: 100%;
+      display: inline-block;
+    }
     width: 66.66666%;
     display: table-cell;
     vertical-align: middle;

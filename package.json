@@ -4,7 +4,8 @@
   "description": "tours for you",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass_code": "node-sass codePen/Blonkisoaz.scss css/Blonkisoaz.css"
   },
   "author": "jackDeng",
   "license": "ISC",
