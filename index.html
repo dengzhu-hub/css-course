@@ -83,21 +83,19 @@
 
           <div class="col-1-of-2">
             <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="nature landscape"
-                class="composition-photo composition-photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="nature landscape"
-                class="composition-photo composition-photo--p2"
-              />
-              <img
-                src="img/nat-3-large.jpg"
-                alt="nature landscape"
-                class="composition-photo composition-photo--p3"
-              />
+
+              <img srcset="img/nat-1-large.jpg 1000w, img/nat-1.jpg 300w" type="image/jpg" 
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p1" alt="img/nat-1"
+              src="img/nat-1-large.jpg">
+              <img srcset="img/nat-2-large.jpg 1000w, img/nat-2.jpg 300w" type="image/jpg" 
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p2" alt="img/nat-2"
+              src="img/nat-2-large.jpg">
+              
+              <img srcset="img/nat-3-large.jpg 1000w, img/nat-3.jpg 300w" type="image/jpg" 
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p3" alt="img/nat-3"
+              src="img/nat-3-large.jpg">
+
+
             </div>
           </div>
         </div>
@@ -394,8 +392,20 @@
 
     <footer class="footer">
       <div class="footer-logo--box">
+        <picture class="footer-logo--item">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+          media="(max-width: 37.5rem)">
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+
+        
+        </picture>
+        
+        <!-- <picture class="footer-logo--item">
+          <source srcset="./img/logo-green-small-1x.png 1x, ./img/logo-green-small-2x 2x" alt="phone" media="(max-width: 37.5em)">
+          <img srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x 2x"  alt="Full logo">
+        </picture> -->
         <!-- <img src="img/logo-green-2x.png" alt="logo img" class="footer-logo--item"> -->
-        <img src="img/Pax_tux.png" alt="logo img" class="footer-logo--item" />
+        <!-- <img src="img/Pax_tux.png" alt="logo img" class="footer-logo--item" /> -->
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -446,8 +456,16 @@
       <div class="popup-content">
         <a href="#section-tours" class="popup-close">&times;</a>
         <div class="popup-left">
-          <img src="./img/nat-8.jpg" alt="Tours photo" class="popup-img">
-          <img src="./img/nat-9.jpg" alt="Tours photo" class="popup-img">
+          <img srcset="img/nat-8.jpg 1000w, img/nat-8-small.jpg 300w" type="image/jpg" 
+          sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="popup-img" alt="img/nat-8"
+          src="img/nat-8-small.jpg">
+
+          <!-- <img src="./img/nat-8.jpg" alt="Tours photo" class="popup-img"> -->
+          <!-- <img src="./img/nat-9.jpg" alt="Tours photo" class="popup-img">
+           -->
+           <img srcset="img/nat-9.jpg 1000w, img/nat-9-small.webp 300w" type="image/jpg" 
+           sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="popup-img" alt="img/nat-9"
+           src="img/nat-9-small.jpg">
 
         </div>
         <div class="popup-right">

@@ -827,5 +827,67 @@
 1. Mobile-first（以移动设备为先）： Mobile-first是一种设计方法，它首先关注移动设备上的用户体验和显示效果。在使用Mobile-first方法时，网页的设计和开发过程从针对移动设备的布局和功能开始，然后再逐步适配到更大屏幕的设备（如平板电脑和桌面电脑）。这种方法的核心理念是将移动设备作为设计的首要考虑因素，因为移动设备的屏幕较小，网络连接可能较慢，用户交互方式也有所不同。通过Mobile-first设计，可以确保网页在移动设备上具有良好的用户体验，并逐步添加更多功能和布局，以适应较大屏幕的设备。
 2. Desktop-first（以桌面设备为先）： Desktop-first是一种设计方法，它以桌面设备为首要考虑因素进行设计和开发。在使用Desktop-first方法时，网页的设计和开发过程从针对桌面设备的布局和功能开始，然后再逐步适配到较小屏幕的设备（如平板电脑和移动设备）。这种方法的思路是将桌面设备的大屏幕和更强大的性能视为设计的主要依据，然后通过适应性布局和其他技术手段来确保网页在较小屏幕上也能提供合适的显示效果和用户体验。
 
+* 我们可以使用sass中的mixin函数，避免重复编写代码
 
+  * ```scss
+    @mixin media($breakpoint) {
+      @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+          @content;
+        }
+      } @else if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {
+          @content;
+        }
+      } @else if $breakpoint == tab-land {
+        @media (max-width: 75em) {
+          @content;
+        }
+      } @else if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {
+          @content;
+        }
+      } @else {
+        @error "Invalid breakpoint";
+      }
+    }
+    
+    ```
+
+* 在我们所需要的地方调用
+
+  * ```scss
+      &-photo {
+        width: 55%;
+        position: absolute;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+        @include media(tab-port) {
+          width: 33.33333333333333%;
+          position: relative;
+          float: left;
+          box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+        }
+          //这里就是，我们在photo里面，当他的宽度小于tab-port时，我们就执行下面的css样式。
+          //tab-port就是在前面设置的，我们只需要用@include调用，而不需要重复编写@media(max-width:56.25em);
+          
+    ```
+
+  * ```scss
+      max-width: $grid-width;
+      margin: 0 auto;
+      @include media(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+      }
+    
+      &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+        @include media(tab-port) {
+          margin-bottom: $gutter-vertical-small;
+        }
+      }
+    // 这些都是这样的，
+    ```
+
+  * 
 
