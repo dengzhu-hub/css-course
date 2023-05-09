@@ -23,11 +23,12 @@
     width: 15rem;
     height: 15rem;
 
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
     float: left;
+
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50 at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     @include media(phone) {
       transform: translateX(-3rem) skewX(0);

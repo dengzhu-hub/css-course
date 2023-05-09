@@ -45,6 +45,9 @@
     transition: transform 0.8s cubic-bezier(0.94, 0.02, 0.08, 1.62);
     // transform: scale(50);
   }
+  .background_hidden  {
+    display: none;
+  }
   &_nav {
     height: 100vh;
     width: 0;
@@ -52,11 +55,9 @@
     top: 0;
     left: 0;
     z-index: 1500;
-
     transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
-
     opacity: 0;
-    // background-color: orangered;
+    // background-color: orangered; 
   }
   &_list {
     list-style: none;

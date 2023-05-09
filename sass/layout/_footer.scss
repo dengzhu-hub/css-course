@@ -1,3 +1,4 @@
+@import "../../node_modules/open-color/open-color.scss";
 .footer {
   background-color: $color-gray-dark-3;
   padding: 10rem 0;
@@ -37,7 +38,7 @@
     &:visited {
       font-size: 1.6rem;
       display: inline-block;
-      color: $color-gray-light-1;
+      color: $oc-blue-5;
       text-decoration: none;
       text-transform: uppercase;
       transition: all 0.3s;

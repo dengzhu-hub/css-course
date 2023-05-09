@@ -21,6 +21,7 @@
     }
     &--back {
       transform: rotateY(180deg);
+      // z-index: -1000;
       &-01 {
         background-image: linear-gradient(
           to right bottom,
@@ -54,7 +55,7 @@
   &-picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: screen;
+    background-blend-mode: screen; //用于设置背景图片与背景颜色之间的混合模式.
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
@@ -166,7 +167,7 @@
     font-weight: 100;
   }
 
-  @include media(tab-port) {
+  @media only screen and (max-width: 37.5em), only screen and(hover: none) {
     height: auto;
     box-shadow: $box-shadow;
     background-color: $color-white;

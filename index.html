@@ -3,37 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
 
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
     <link
       rel="stylesheet"
       type="text/css"
       title="default"
       href="css/style.css"
     />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <link rel="stylesheet" href="css/icons.css" media="all" />
 
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
     <div class="navigation">
-      <input type="checkbox" id="navi-toggle" class="navigation_checkbox">
+      <input type="checkbox" id="navi-toggle" class="navigation_checkbox" />
       <label for="navi-toggle" class="navigation_button">
         <span class="navigation_icon">&nbsp;</span>
       </label>
-      <div class="navigation_background">&nbsp;</div>
+      <div class="navigation_background ">&nbsp;</div>
       <nav class="navigation_nav">
         <ul class="navigation_list">
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>01</span>About Natous</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>02</span>Your Benefits</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>03</span>Popular Tours</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>04</span>Stories</a></li>
-          <li class="navigation_item"><a href="#" class="navigation_link"><span>05</span>Book Now</a></li>
+          <li class="navigation_item">
+            <a href="#section-about" class="navigation_link"><span>01</span>About Natous</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#section-features" class="navigation_link"><span>02</span>Your Benefits</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#section-tours" class="navigation_link"><span>03</span>Popular Tours</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#section-stories" class="navigation_link"><span>04</span>Stories</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#section-booking" class="navigation_link"><span>05</span>Book Now</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -47,13 +58,15 @@
           <span class="heading-primary--main">outdoors</span>
           <span class="heading-primary--sub">is where life happen</span>
         </h1>
-        <a href="#section-tours" class="btn btn--white btn--animated">discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >discover our tours</a
+        >
         <!-- <i class="fa  fa-chevron-down"></i> -->
       </div>
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -83,24 +96,36 @@
 
           <div class="col-1-of-2">
             <div class="composition">
+              <img
+                srcset="img/nat-1-large.jpg 1000w, img/nat-1.jpg 300w"
+                type="image/jpg"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px "
+                class="composition-photo composition-photo--p1"
+                alt="img/nat-1"
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                srcset="img/nat-2-large.jpg 1000w, img/nat-2.jpg 300w"
+                type="image/jpg"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px "
+                class="composition-photo composition-photo--p2"
+                alt="img/nat-2"
+                src="img/nat-2-large.jpg"
+              />
 
-              <img srcset="img/nat-1-large.jpg 1000w, img/nat-1.jpg 300w" type="image/jpg" 
-              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p1" alt="img/nat-1"
-              src="img/nat-1-large.jpg">
-              <img srcset="img/nat-2-large.jpg 1000w, img/nat-2.jpg 300w" type="image/jpg" 
-              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p2" alt="img/nat-2"
-              src="img/nat-2-large.jpg">
-              
-              <img srcset="img/nat-3-large.jpg 1000w, img/nat-3.jpg 300w" type="image/jpg" 
-              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="composition-photo composition-photo--p3" alt="img/nat-3"
-              src="img/nat-3-large.jpg">
-
-
+              <img
+                srcset="img/nat-3-large.jpg 1000w, img/nat-3.jpg 300w"
+                type="image/jpg"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px "
+                class="composition-photo composition-photo--p3"
+                alt="img/nat-3"
+                src="img/nat-3-large.jpg"
+              />
             </div>
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -235,7 +260,7 @@
                   <ul>
                     <li>5 days tour</li>
                     <li>up to 15 people</li>
-                    
+
                     <li>3 tour guides</li>
                     <li>sleep in cozy hostels</li>
                     <li>difficulty:hard</li>
@@ -259,10 +284,10 @@
           <a href="#" class="btn btn--green">discover all tours</a>
         </div>
       </section>
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video-content" autoplay muted loop>
-            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/lake-vidoe.mp4" type="video/mp4" />
             <source src="img/video.webm" type="video/webm" />
             your video not can be played!
           </video>
@@ -315,8 +340,7 @@
           <a href="#" class="btn--text">read all stories &rarr;</a>
         </div>
       </section>
-
-      <section class="section-booking" id="booking-now">
+      <section class="section-booking" id="section-booking">
         <div class="row">
           <div class="book">
             <div class="book-form">
@@ -390,16 +414,22 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-logo--box">
         <picture class="footer-logo--item">
-          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
-          media="(max-width: 37.5rem)">
-          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
-
-        
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+          />
         </picture>
-        
+
         <!-- <picture class="footer-logo--item">
           <source srcset="./img/logo-green-small-1x.png 1x, ./img/logo-green-small-2x 2x" alt="phone" media="(max-width: 37.5em)">
           <img srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x 2x"  alt="Full logo">
@@ -456,23 +486,46 @@
       <div class="popup-content">
         <a href="#section-tours" class="popup-close">&times;</a>
         <div class="popup-left">
-          <img srcset="img/nat-8.jpg 1000w, img/nat-8-small.jpg 300w" type="image/jpg" 
-          sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="popup-img" alt="img/nat-8"
-          src="img/nat-8-small.jpg">
+          <img
+            srcset="img/nat-8.jpg 1000w, img/nat-8-small.jpg 300w"
+            type="image/jpg"
+            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "
+            class="popup-img"
+            alt="img/nat-8"
+            src="img/nat-8-small.jpg"
+          />
 
           <!-- <img src="./img/nat-8.jpg" alt="Tours photo" class="popup-img"> -->
           <!-- <img src="./img/nat-9.jpg" alt="Tours photo" class="popup-img">
            -->
-           <img srcset="img/nat-9.jpg 1000w, img/nat-9-small.webp 300w" type="image/jpg" 
-           sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "  class="popup-img" alt="img/nat-9"
-           src="img/nat-9-small.jpg">
-
+          <img
+            srcset="img/nat-9.jpg 1000w, img/nat-9-small.webp 300w"
+            type="image/jpg"
+            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px "
+            class="popup-img"
+            alt="img/nat-9"
+            src="img/nat-9-small.jpg"
+          />
         </div>
         <div class="popup-right">
-          <h2 class="heading-secondary u-margin-bottom-small">Starting book now</h2>
-          <h3 class="heading-tertiary u-margin-bottom-small">Import &ndash; Please read these terms before booking</h3>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Starting book now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Import &ndash; Please read these terms before booking
+          </h3>
           <p class="popup-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras. Ut ornare lectus sit amet est placerat in. Eros in cursus turpis massa tincidunt dui ut ornare. Nibh sit amet commodo nulla. Non blandit massa enim nec dui nunc mattis. Porta non pulvinar neque laoreet suspendisse interdum. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Fusce id velit ut tortor pretium viverra suspendisse. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Tristique risus nec feugiat in fermentum posuere. Quam elementum pulvinar etiam non quam lacus.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Pellentesque elit ullamcorper dignissim cras. Ut ornare lectus sit
+            amet est placerat in. Eros in cursus turpis massa tincidunt dui ut
+            ornare. Nibh sit amet commodo nulla. Non blandit massa enim nec dui
+            nunc mattis. Porta non pulvinar neque laoreet suspendisse interdum.
+            Sit amet massa vitae tortor condimentum lacinia quis vel eros. Fusce
+            id velit ut tortor pretium viverra suspendisse. Sit amet consectetur
+            adipiscing elit duis tristique sollicitudin nibh. Tristique risus
+            nec feugiat in fermentum posuere. Quam elementum pulvinar etiam non
+            quam lacus.
           </p>
           <a href="#booking-now" class="btn btn--green">Booking Now</a>
         </div>
@@ -554,5 +607,6 @@ This is a column 1 of 4
 
        
         </section> -->
+        <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

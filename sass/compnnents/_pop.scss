@@ -9,7 +9,15 @@
   position: fixed;
   top: 0;
   left: 0;
+
   background-color: rgba($oc-black, 0.8);
+  @supports (
+    (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
+  ) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($oc-black, 0.3);
+  }
   z-index: 9999;
   transition: all 0.3s;
   //   display: none;
