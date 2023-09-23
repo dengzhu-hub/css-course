@@ -5,7 +5,7 @@
   }
 
   &_button {
-    background-color: $oc-white;
+    background-color: $oc-teal-4;
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -45,7 +45,7 @@
     transition: transform 0.8s cubic-bezier(0.94, 0.02, 0.08, 1.62);
     // transform: scale(50);
   }
-  .background_hidden  {
+  .background_hidden {
     display: none;
   }
   &_nav {
@@ -57,7 +57,7 @@
     z-index: 1500;
     transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
     opacity: 0;
-    // background-color: orangered; 
+    // background-color: orangered;
   }
   &_list {
     list-style: none;
@@ -106,7 +106,7 @@
 
   // functionality
   &_checkbox:checked ~ &_background {
-    transform: scale(50);
+    transform: scale(100);
   }
   &_checkbox:checked ~ &_nav {
     opacity: 1;

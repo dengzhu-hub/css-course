@@ -9,7 +9,7 @@ body {
    height:100vh;
    
    font-family: 'Roboto', sans-serif;
-   transition:.25s;
+   transition: all .25s;
    @include dark {
       background: #232223;
       color:white;
